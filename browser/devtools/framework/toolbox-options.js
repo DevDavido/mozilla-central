@@ -8,6 +8,7 @@ const {Cu, Cc, Ci} = require("chrome");
 
 let promise = require("sdk/core/promise");
 let EventEmitter = require("devtools/shared/event-emitter");
+let GeolocaterPrefs = require("devtools/framework/geolocation-override");
 
 Cu.import('resource://gre/modules/XPCOMUtils.jsm');
 Cu.import("resource://gre/modules/Services.jsm");
