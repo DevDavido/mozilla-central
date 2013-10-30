@@ -76,6 +76,10 @@ WifiGeoPositionObject.prototype = {
 function Prefs() {
   this._update = Cc["@mozilla.org/geolocation/service;1"].getService(Ci.nsIGeolocationUpdate);
   this.forceUpdate = function() {
+    let isOverrideActive = Services.prefs.getBoolPref('devtools.geolocation.override-position');
+    if (!isOverrideActive) {
+        return false;
+    }
     let latitude = parseFloat(Services.prefs.getCharPref("devtools.geolocation.override-latitude").replace(",", "."));
     let longitude = parseFloat(Services.prefs.getCharPref("devtools.geolocation.override-longitude").replace(",", "."));
     let loc = new WifiGeoPositionObject(latitude,
