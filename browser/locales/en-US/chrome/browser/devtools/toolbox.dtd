@@ -134,6 +134,4 @@ Gecko platform symbols">
 <!ENTITY options.overrideGeolocationPosition.label    "Override geolocation position">
 <!ENTITY options.overrideGeolocationPosition.tooltip  "If you enable this option the JavaScript geolocation functions will return your given position">
 <!ENTITY options.overrideGeolocationLatitude.label    "Latitude:">
-<!ENTITY options.overrideGeolocationLatitude.tooltip  "Latitude position">
 <!ENTITY options.overrideGeolocationLongitude.label   "Longitude:">
-<!ENTITY options.overrideGeolocationLongitude.tooltip "Longitude position">
