@@ -63,9 +63,10 @@
         </vbox>
         <label value="&options.geolocation.label;"/>
         <vbox id="geolocation-options" class="options-groupbox">
-          <checkbox label="&options.overrideGeolocationPosition.label;"
+          <checkbox id="devtools-geolocation-override-position"
+                    label="&options.overrideGeolocationPosition.label;"
                     tooltiptext="&options.overrideGeolocationPosition.tooltip;"
-                    data-pref="devtools.geolocation.override-geolocation-position"/>
+                    data-pref="devtools.geolocation.override-position"/>
           <box orient="horizontal">
             <vbox>
               <label control="devtools-geolocation-override-latitude"
@@ -76,7 +77,7 @@
                        hidespinbuttons="true"
                        max="90"
                        min="-90"
-                       data-pref="devtools.geolocation.override-geolocation-latitude"/>
+                       data-pref="devtools.geolocation.override-latitude"/>
             </vbox>
             <vbox>
               <label control="devtools-geolocation-override-longitude"
@@ -87,7 +88,7 @@
                        hidespinbuttons="true"
                        max="180"
                        min="-180"
-                       data-pref="devtools.geolocation.override-geolocation-longitude"/>
+                       data-pref="devtools.geolocation.override-longitude"/>
             </vbox>
           </box>
         </vbox>
