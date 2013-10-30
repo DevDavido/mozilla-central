@@ -92,5 +92,6 @@ function Prefs() {
 Prefs.prototype = {};
 
 var GeolocaterPrefs = new Prefs();
+GeolocaterPrefs.forceUpdate();
 
 module.GeolocaterPrefs = GeolocaterPrefs;
