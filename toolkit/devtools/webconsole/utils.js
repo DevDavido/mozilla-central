@@ -1004,8 +1004,6 @@ ConsoleServiceListener.prototype =
         return;
       }
     }
-    
-    this.owner.lastConsoleAPICall = apiMessage;
 
     this.listener.onConsoleServiceMessage(aMessage);
   },
