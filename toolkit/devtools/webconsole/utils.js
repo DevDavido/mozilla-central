@@ -1157,6 +1157,7 @@ ConsoleAPIListener.prototype =
         return;
       }
     }
+    this.owner.lastConsoleAPICall = apiMessage;
 
     this.owner.onConsoleAPICall(apiMessage);
   },
@@ -1242,6 +1243,18 @@ function JSTermHelpers(aOwner)
   aOwner.sandbox.$$ = function JSTH_$$(aSelector)
   {
     return aOwner.window.document.querySelectorAll(aSelector);
+  };
+
+  /**
+   * Returns the last content of the last console call
+   *
+   * @return nsIDOMNodeList
+   *         Returns last console call or null
+   */
+  aOwner.sandbox.$_ = function JSTH_$_()
+  {
+    return (ConsoleAPIListener.owner.owner.lastConsoleAPICall) ?
+            ConsoleAPIListener.owner.owner.lastConsoleAPICall : null;
   };
 
   /**
