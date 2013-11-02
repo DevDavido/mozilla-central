@@ -1707,4 +1707,3 @@ NetworkEventActor.prototype.requestTypes =
 
 DebuggerServer.addTabActor(WebConsoleActor, "consoleActor");
 DebuggerServer.addGlobalActor(WebConsoleActor, "consoleActor");
-
