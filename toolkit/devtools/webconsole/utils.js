@@ -114,27 +114,6 @@ let WebConsoleUtils = {
   },
 
   /**
-   * Saves the latest web console API call
-   *
-   * @param object apiCall
-   * @return void
-   */
-  setLastConsoleAPICall: function WCU_setLastConsoleAPICall(apiCall)
-  {
-    this.lastConsoleAPICall = apiCall;
-  },
-
-  /**
-   * Saves the latest web console API call
-   *
-   * @return object|null
-   */
-  getLastConsoleAPICall: function WCU_getLastConsoleAPICall()
-  {
-    return (this.lastConsoleAPICall) ? this.lastConsoleAPICall : null;
-  },
-
-  /**
    * Gets the ID of the inner window of this DOM window.
    *
    * @param nsIDOMWindow aWindow
@@ -1178,7 +1157,6 @@ ConsoleAPIListener.prototype =
         return;
       }
     }
-    WebConsoleUtils.setLastConsoleAPICall(apiMessage);
 
     this.owner.onConsoleAPICall(apiMessage);
   },
@@ -1264,17 +1242,6 @@ function JSTermHelpers(aOwner)
   aOwner.sandbox.$$ = function JSTH_$$(aSelector)
   {
     return aOwner.window.document.querySelectorAll(aSelector);
-  };
-
-  /**
-   * Returns the last content of the last console call
-   *
-   * @return nsIDOMNodeList
-   *         Returns last console call or null
-   */
-  aOwner.sandbox.$_ = function JSTH_$_()
-  {
-    return WebConsoleUtils.getLastConsoleAPICall();
   };
 
   /**
