@@ -690,6 +690,8 @@ WebConsoleActor.prototype =
         }
       }
     }
+    
+    this.setLastConsoleInputEvaluation(result);
 
     return {
       from: this.actorID,
