@@ -424,6 +424,27 @@ WebConsoleActor.prototype =
   {
     this._actorPool.removeActor(aActor.actorID);
   },
+  
+  /**
+   * Saves the latest web console input evaluation
+   *
+   * @param object inputEvaluation
+   * @return void
+   */
+  setLastConsoleInputEvaluation: function WCA_setLastConsoleInputEvaluation(inputEvaluation)
+  {
+    this.lastConsoleInputEvaluation = inputEvaluation;
+  },
+
+  /**
+   * Saves the latest web console input evaluation
+   *
+   * @return object|null
+   */
+  getLastConsoleInputEvaluation: function WCU_getLastConsoleInputEvaluation()
+  {
+    return (this.lastConsoleInputEvaluation) ? this.lastConsoleInputEvaluation : null;
+  },
 
   //////////////////
   // Request handlers for known packet types.
